@@ -1,7 +1,7 @@
 document.getElementById('fetch-button').addEventListener('click', fetchData);
 
 async function fetchData() {
-    const response = await fetch('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY');
+    const response = await fetch('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY', {method: 'GET', referrerPolicy: 'no-referrer'});
     const data = await response.json();
     const jsonContent = JSON.stringify(data, null, 2);
 
